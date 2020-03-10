@@ -13,7 +13,6 @@ Use -n switch to change this default value.
 
 #define MAXSIZE 5     //Maximum lines that the program can read
 #define MAXLENGTH 255 //Maximum length of a line
-#define MAXLENGTH 255 //Maximum length of a line
 #define NLINES 10     //Default number of lines to print
 
 char* lines[MAXSIZE]; //Array that holds the pointers to the strings
