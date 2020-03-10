@@ -2,7 +2,7 @@
 
 Linux Tail program implementation.
 
-Reading lines from the stdin, Tail prints by default the last 10 lines back to the stdout by default.
+Reading lines from the stdin, Tail prints the last 10 lines by default to the stdout.
 Use -n switch to change this default value.
 
 */
