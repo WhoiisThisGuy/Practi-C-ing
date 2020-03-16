@@ -28,8 +28,8 @@ int gettoken(void);
 int tokentype; /* type of last token */
 
 /* @Near flag variables. */
-int isconstantpointer; // mark if it is const*
-int isconstantdatatype;// mark if it is const int,char... or int,char const... etc.
+static int isconstantpointer; // mark if it is const*
+static int isconstantdatatype;// mark if it is const int,char... or int,char const... etc.
 
 char token[MAXTOKEN]; /* last token string */
 char name[MAXTOKEN]; /* identifier name */
