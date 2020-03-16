@@ -1,9 +1,9 @@
-/* author: Dennis M. Ritchie, Brian W. Keringhan
+/* authors: Dennis M. Ritchie, Brian W. Keringhan
 
    The code is copied from the book "The C programming language",
    I only modified the code to accept "const" keyword aswell. There is no error handling added. Future work maybe.
    Usage: Run, then type in some declaration like: int* a
-   Expectetd output: a: pointer to int
+   Expected output: a: pointer to int
    ';' is not needed to the end of the declaration.
    at the moment if you enter one bad declaration (bad syntax), you have to restart the program.
    @Near
@@ -20,16 +20,16 @@
 #define TRUE 1
 #define FALSE 0
 
-enum { NAME, PARENS, BRACKETS, CONST };
+enum { NAME, PARENS, BRACKETS, CONST }; //@Near added CONST
 
 void dcl(void);
 void dirdcl(void);
 int gettoken(void);
 int tokentype; /* type of last token */
 
-/* @Near flag variable. */
-int isconstantpointer;
-int isconstantdatatype;
+/* @Near flag variables. */
+int isconstantpointer; // mark if it is const*
+int isconstantdatatype;// mark if it is const int,char... or int,char const... etc.
 
 char token[MAXTOKEN]; /* last token string */
 char name[MAXTOKEN]; /* identifier name */
@@ -40,6 +40,7 @@ char out[MAXOUT];
 int main() /* convert declaration to words */
 {
 	while (gettoken() != EOF) { /* 1st token on line */
+		//@Near init variables
 		memset(datatype, 0, sizeof(MAXTOKEN));
 		isconstantpointer = FALSE;
 		isconstantdatatype = FALSE;
@@ -89,7 +90,7 @@ void dirdcl(void)
 		if (tokentype != ')')
 			printf("error: missing )\n");
 	}
-	/* @Near Modification to catch CONST tokentype */
+	/* @Near Catch CONST tokentype */
 	else if (tokentype == CONST) {
 
 		/* If it is not the pointer that is constant then it is the datatype
@@ -146,7 +147,7 @@ int gettoken(void) /* return next token */
 		*p = '\0';
 		unmigetch(c);
 
-		/* Modification to check for constant keyword */
+		/* @Near Check for constant keyword */
 		if (strcmp(token, "const") == 0) {
 			if ((c = gettoken()) == '*') //check if it will be a constant pointer
 				isconstantpointer = TRUE;
