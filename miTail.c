@@ -2,7 +2,7 @@
 
 Linux Tail program implementation.
 
-Reading lines from the stdin, Tail prints by default the last 10 lines back to the stdou by default.
+Reading lines from the stdin, Tail prints the last 10 lines by default to the stdout.
 Use -n switch to change this default value.
 
 */
@@ -12,7 +12,6 @@ Use -n switch to change this default value.
 #include <string.h>
 
 #define MAXSIZE 5     //Maximum lines that the program can read
-#define MAXLENGTH 255 //Maximum length of a line
 #define MAXLENGTH 255 //Maximum length of a line
 #define NLINES 10     //Default number of lines to print
 
