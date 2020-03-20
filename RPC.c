@@ -1,9 +1,9 @@
 /* @author Near
- * 
-	* This is a simple C program that implements Reverse Polish Notation calculator.
-	* The program takes the inputs from command line arguments.
-	* I did not add serious exception handling. Wrong input ==> undefined output.
-	* 																																																																						*/
+* 
+* This is a simple C program that implements Reverse Polish Notation calculator.
+* The program takes the inputs from command line arguments.
+* I did not add serious exception handling. Wrong input ==> undefined output.
+* 																																																																						*/
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h> 
