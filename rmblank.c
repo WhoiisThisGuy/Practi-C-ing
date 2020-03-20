@@ -1,10 +1,10 @@
 /* author: @Near 
- * 
-	* My implementation of a function that removes the mutliplicated blank characters.
-	* Not so special but was good for practicing pointers.
-	* For example: rmBlank("a  b") --> "a b", rmBlank("a\t\tb") --> rmBlank("a\tb") etc.
-	* 
-	* */
+* 
+* My implementation of a function that removes the mutliplicated blank characters.
+* Not so special but was good for practicing pointers.
+* For example: rmBlank("a  b") --> "a b", rmBlank("a\t\tb") --> rmBlank("a\tb") etc.
+* 
+* */
 
 #include <stdio.h>
 
